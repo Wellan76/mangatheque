@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Naruto - Mangathèque</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Naruto</h1>
+    <button id="logoutBtn">Se déconnecter</button>
+  </header>
+
+  <main>
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg" alt="Naruto">
+    <p>Un jeune ninja rêve de devenir Hokage et de gagner le respect de son village.</p>
+
+    <h2>Liste des tomes</h2>
+    <ul id="tome-list">
+      <li><input type="checkbox" data-tome="1"> Tome 1</li>
+      <li><input type="checkbox" data-tome="2"> Tome 2</li>
+      <li><input type="checkbox" data-tome="3"> Tome 3</li>
+    </ul>
+  </main>
+
+  <script type="module">
+    import { auth, db } from "../js/firebase-init.js";
+    import { onAuthStateChanged, signOut } 
+      from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { doc, setDoc, getDoc } 
+      from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const logoutBtn = document.getElementById('logoutBtn');
+    const checkboxes = document.querySelectorAll('#tome-list input[type=checkbox]');
+    const serieId = "naruto";
+
+    onAuthStateChanged(auth, user => {
+      if (!user) {
+        window.location.href = "../login.html";
+      } else {
+        // Charger état des tomes
+        checkboxes.forEach(async checkbox => {
+          const docRef = doc(db, "users", user.uid, "series", serieId, "tomes", checkbox.dataset.tome);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists() && docSnap.data().owned) {
+            checkbox.checked = true;
+          }
+          checkbox.addEventListener('change', async () => {
+            await setDoc(docRef, { owned: checkbox.checked });
+          });
+        });
+      }
+    });
+
+    logoutBtn.addEventListener('click', () => {
+      signOut(auth);
+    });
+  </script>
+</body>
+</html>
