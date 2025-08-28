@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Captor Sakura - Clear Card</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #000;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(157, 104, 120, 1); /* Couleur personnalisable */
+      padding: 40px;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .presentation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .presentation img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .resume {
+      flex: 1;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .links {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px 20px;
+      padding: 12px 24px;
+      background-color: #a78bfa;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .links a:hover {
+      background-color: #8b5cf6;
+      color: white;
+    }
+
+    .tome-list {
+      margin-top: 50px;
+    }
+
+    .tome-list h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .tomes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .tome {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 130px;
+    }
+
+    .tome img {
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .tome label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Card Captor Sakura - Clear Card</h1>
+
+    <div class="presentation">
+      <img src="https://cdn1.booknode.com/book_cover/984/full/card-captor-sakura-clear-card-arc-tome-1-984420.jpg" alt="Couverture du manga">
+      <div class="resume">
+        <p>
+          C’est le mois d’avril, les cerisiers sont en fleur et Sakura entame son année de cinquième. Tout semble se passer pour le mieux : Shaolan est de retour comme promis et fréquente le même collège ! Mais une nuit, elle fait un rêve étrange... À son réveil, toutes ses cartes sont devenues transparentes et inutilisables ! Guidée par une clef apparue en rêve, Sakura est sur le point de débuter une nouvelle aventure !
+        </p>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="https://exemple1.com" target="_blank">Acheter sur Site 1</a>
+      <a href="https://exemple2.com" target="_blank">Acheter sur Site 2</a>
+    </div>
+
+    <div class="tome-list">
+      <h2>Liste des Tomes</h2>
+      <div class="tomes">
+        <!-- Exemple pour 3 tomes -->
+        <div class="tome">
+          <img src="LIEN_IMAGE_TOME1" alt="Tome 1">
+          <label><input type="checkbox" data-tome="serie-t1"> Tome 1</label>
+        </div>
+        <div class="tome">
+          <img src="LIEN_IMAGE_TOME2" alt="Tome 2">
+          <label><input type="checkbox" data-tome="serie-t2"> Tome 2</label>
+        </div>
+        <div class="tome">
+          <img src="LIEN_IMAGE_TOME3" alt="Tome 3">
+          <label><input type="checkbox" data-tome="serie-t3"> Tome 3</label>
+        </div>
+        <!-- Tu peux copier ce bloc pour plus de tomes -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sauvegarde de l'état des cases à cocher
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+      const id = checkbox.dataset.tome;
+      const saved = localStorage.getItem(id);
+      if (saved === "true") checkbox.checked = true;
+
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem(id, checkbox.checked);
+      });
+    });
+  </script>
+</body>
+</html>

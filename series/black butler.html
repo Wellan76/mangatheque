@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Black Butler</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #000;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(36, 27, 58, 0.85);
+      padding: 40px;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .presentation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .presentation img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .resume {
+      flex: 1;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .links {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px 20px;
+      padding: 12px 24px;
+      background-color: #a78bfa;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .links a:hover {
+      background-color: #8b5cf6;
+      color: white;
+    }
+
+    .tome-list {
+      margin-top: 50px;
+    }
+
+    .tome-list h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .tomes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .tome {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 130px;
+    }
+
+    .tome img {
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+     border-radius: 5px;
+    }
+
+    .tome label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Black Butler</h1>
+
+    <div class="presentation">
+      <img src="https://m.media-amazon.com/images/I/71TiGSTYbAL.jpg" alt="Couverture de Black Butler">
+      <div class="resume">
+        <p>
+          Au cours du XIXe siècle, le Comte Ciel Phantomhive, âgé de 12 ans, réside dans un luxueux manoir aux abords de Londres, en compagnie de quatre domestiques loufoques et de son fidèle majordome aux capacités hors-norme, Sebastian Michaelis. Séquestré et abusé par une mystérieuse secte trois ans plus tôt, Ciel hérita de l’entreprise Phantom à la suite du meurtre de ses parents, mais aussi du titre de « chien de garde » de la reine Victoria chargé de manœuvrer secrètement pour démêler les complots occultes qui se trament dans le royaume.
+        </p>
+        <p>
+
+
+          Lors de ses enquêtes, Ciel est accompagné par l'élégant Sebastian dont les actions époustouflantes dissimulent un sombre secret : le majordome est en réalité un démon ayant pactisé avec Ciel afin que celui-ci trouve l'identité de ses ravisseurs et obtienne sa vengeance. Une fois celle-ci accomplie, sous les termes de leur contrat, Sebastian pourra dévorer l'âme de Ciel.
+        </p>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="https://bazardumanga.com/vue/afficherMangaUnite.php?id_manga=59" target="_blank">Acheter sur Bazar du Manga</a>
+     
+    </div>
+
+    <div class="tome-list">
+      <h2>Liste des Tomes</h2>
+      <div class="tomes">
+        <!-- TOMES 1 à 5 -->
+        <div class="tome">
+          <img src="https://m.media-amazon.com/images/I/71TiGSTYbAL.jpg" alt="Tome 1">
+          <label><input type="checkbox" data-tome="blackbutler-t1"> Tome 1</label>
+        </div>
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/671/mod11/black_butler_tome_2-671003-264-432.webp" alt="Tome 2">
+          <label><input type="checkbox" data-tome="blackbutler-t2"> Tome 2</label>
+        </div>
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/671/mod11/black_butler_tome_3-671000-264-432.webp" alt="Tome 3">
+          <label><input type="checkbox" data-tome="blackbutler-t3"> Tome 3</label>
+        </div>
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/71/mod11/black_butler_tome_4-71112-264-432.webp" alt="Tome 4">
+          <label><input type="checkbox" data-tome="blackbutler-t4"> Tome 4</label>
+        </div>
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/112/mod11/black_butler_tome_5-112371-264-432.webp" alt="Tome 5">
+          <label><input type="checkbox" data-tome="blackbutler-t5"> Tome 5</label>
+        </div>
+
+          <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/159/mod11/black_butler_tome_6-158843-264-432.webp" alt="Tome 6">
+          <label><input type="checkbox"> Tome 6</label>
+        </div>
+        
+
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/206/mod11/black_butler_tome_7-205640-264-432.webp" alt="Tome 7">
+          <label><input type="checkbox"> Tome 7</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/261/mod11/black_butler_tome_8-260953-264-432.webp" alt="Tome 8">
+          <label><input type="checkbox"> Tome 8</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/334/mod11/black_butler_tome_9-334323-264-432.webp" alt="Tome 9">
+          <label><input type="checkbox"> Tome 9</label> 
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/1825/mod11/black_butler_tome_10-1824852-264-432.webp" alt="Tome 10">
+          <label><input type="checkbox">Tome 10 </label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/2948/mod11/black_butler_tome_11-2947663-264-432.webp" alt="Tome 11">
+          <label><input type="checkbox"> Tome 11</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/3375/mod11/black_butler_tome_12-3375053-264-432.webp" alt="Tome 12">
+          <label><input type="checkbox">Tome 12 </label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/4391/mod11/black_butler_tome_13-4391362-264-432.webp" alt="Tome 13">
+          <label><input type="checkbox"> Tome 13</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/344/mod11/black_butler_tome_14-344177-264-432.webp" alt="Tome 14">
+          <label><input type="checkbox"> Tome14</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/363/mod11/black_butler_tome_15-362797-264-432.webp" alt="Tome 15">
+          <label><input type="checkbox">Tome 15</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/403/mod11/black_butler_tome_16-402844-264-432.webp" alt="Tome 16">
+          <label><input type="checkbox">Tome 16 </label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/491/mod11/black_butler_tome_17-491213-264-432.webp" alt="Tome 17">
+          <label><input type="checkbox">Tome 17</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/563/mod11/black_butler_tome_18-562984-264-432.webp" alt="Tome 18">
+          <label><input type="checkbox"> Tome 18</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/623/mod11/black_butler_tome_19-622687-264-432.webp" alt="Tome 19">
+          <label><input type="checkbox"> Tome 19</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/685/mod11/black_butler_tome_20-685150-264-432.webp" alt="Tome 20">
+          <label><input type="checkbox">Tome 20 </label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/738/mod11/black_butler_tome_21-738464-264-432.webp" alt="Tome 21">
+          <label><input type="checkbox"> Tome 21</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/773/mod11/black_butler_tome_22-772541-264-432.webp" alt="Tome 22">
+          <label><input type="checkbox"> Tome 22</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/863/mod11/black_butler_tome_23-862918-264-432.webp" alt="Tome 23">
+          <label><input type="checkbox"> Tome 23</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/920/mod11/black_butler_tome_24-920141-264-432.webp" alt="Tome 24">
+          <label><input type="checkbox"> Tome 24</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/1034/mod11/black_butler_tome_25-1033507-264-432.webp" alt="Tome 25">
+          <label><input type="checkbox"> Tome 25</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/1070/mod11/black_butler_tome_26-1069638-264-432.webp" alt="Tome 26">
+          <label><input type="checkbox"> Tome 26</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/1161/mod11/black_butler_tome_27-1161039-264-432.webp" alt="Tome 27">
+          <label><input type="checkbox"> Tome 27</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/1232/mod11/black_butler_tome_28-1231651-264-432.webp" alt="Tome 28">
+          <label><input type="checkbox"> Tome 28</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/1396/mod11/black_butler_tome_29-1395963-264-432.webp" alt="Tome 29">
+          <label><input type="checkbox"> Tome 29</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/1466/mod11/black_butler_tome_30-1466187-264-432.webp" alt="Tome 30">
+          <label><input type="checkbox"> Tome 30</label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/4967/mod11/black_butler_tome_31-4966550-264-432.webp" alt="Tome 31">
+          <label><input type="checkbox">Tome 31 </label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/5118/mod11/black_butler_tome_32-5117998-264-432.webp" alt="Tome 32">
+          <label><input type="checkbox">Tome 32 </label>
+        </div>
+        
+
+        <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/5354/mod11/black_butler_tome_33-5353526-264-432.webp" alt="Tome 33">
+          <label><input type="checkbox"> Tome 33</label>
+        </div>
+
+         <div class="tome">
+          <img src="https://cdn1.booknode.com/book_cover/5523/mod11/black_butler_tome_34-5523230-264-432.webp" alt="Tome 34">
+          <label><input type="checkbox"> Tome 34</label>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Charger l'état des cases depuis localStorage
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+      const id = checkbox.dataset.tome;
+      const saved = localStorage.getItem(id);
+      if (saved === "true") checkbox.checked = true;
+
+      // Sauvegarder à chaque changement
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem(id, checkbox.checked);
+      });
+    });
+  </script>
+</body>
+</html>

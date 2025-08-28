@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>bleach</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #000;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(27, 38, 49, 1); /* Couleur personnalisable */
+      padding: 40px;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .presentation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .presentation img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .resume {
+      flex: 1;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .links {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px 20px;
+      padding: 12px 24px;
+      background-color: #a78bfa;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .links a:hover {
+      background-color: #8b5cf6;
+      color: white;
+    }
+
+    .tome-list {
+      margin-top: 50px;
+    }
+
+    .tome-list h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .tomes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .tome {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 130px;
+    }
+
+    .tome img {
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .tome label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Bleach</h1>
+
+    <div class="presentation">
+      <img src="https://cdn1.booknode.com/book_cover/1004/mod11/bleach_tome_1_the_death_and_the_strawberry-1004319-264-432.webp" alt="Couverture du manga">
+      <div class="resume">
+        <p>
+         Le récit commence en 2001 au Japon dans la ville fictive de Karakura. Ichigo Kurosaki, lycéen de 15 ans, arrive à voir, entendre et toucher les âmes des morts depuis qu'il est tout petit. Un soir, sa routine quotidienne vient à être bouleversée à la suite de sa rencontre avec une shinigami (死神?, littéralement « dieu de la mort »), Rukia Kuchiki, et la venue d'un monstre appelé hollow. Ce dernier étant venu dévorer les âmes de sa famille et la shinigami venue le protéger ayant été blessée par sa faute, Ichigo accepte de devenir lui-même un shinigami afin de les sauver.
+          </p>
+          <p>
+        Cependant, le transfert de pouvoir, censé être temporaire et partiel, est complet et ne s'achève pas. Ichigo est forcé de prendre la responsabilité de la tâche incombant à Rukia Kuchiki. Il commence donc la chasse aux hollows tout en protégeant les âmes humaines.
+          </p>
+          <p>
+          Le début est centré sur une chasse aux mauvais esprits relativement peu puissants, avec un simple sabre. L'histoire va peu à peu se diriger vers un vaste complot mystico-politique après l'apparition des premiers autres shinigami. Les batailles au sabre du commencement vont alors se métamorphoser en combats dantesques avec des armes aux pouvoirs surprenants et variés, et parfois aux proportions gigantesques.
+        </p>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="https://bazardumanga.com/vue/afficherMangaUnite.php?id_manga=47#resume_complet" target="_blank">Acheter sur Bazar du Manga</a>
+      
+    </div>
+
+    <div class="tome-list">
+      <h2>Liste des Tomes</h2>
+      <div class="tomes">
+        <!-- Exemple pour 3 tomes -->
+        <div class="tome">
+          <img src="LIEN_IMAGE_TOME1" alt="Tome 1">
+          <label><input type="checkbox" data-tome="serie-t1"> Tome 1</label>
+        </div>
+        <div class="tome">
+          <img src="LIEN_IMAGE_TOME2" alt="Tome 2">
+          <label><input type="checkbox" data-tome="serie-t2"> Tome 2</label>
+        </div>
+        <div class="tome">
+          <img src="LIEN_IMAGE_TOME3" alt="Tome 3">
+          <label><input type="checkbox" data-tome="serie-t3"> Tome 3</label>
+        </div>
+        <!-- Tu peux copier ce bloc pour plus de tomes -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sauvegarde de l'état des cases à cocher
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+      const id = checkbox.dataset.tome;
+      const saved = localStorage.getItem(id);
+      if (saved === "true") checkbox.checked = true;
+
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem(id, checkbox.checked);
+      });
+    });
+  </script>
+</body>
+</html>
